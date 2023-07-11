@@ -1,0 +1,24 @@
+{
+    "name": "file-cache",
+    "author": "18Miguel",
+    "version": "1.0.0",
+    "description": "A simple file-based cache implementation",
+    "private": true,
+    "main": "file-cache.js",
+    "scripts": {
+        "test": "node test/index.js"
+    },
+    "license": "MIT",
+    "keywords": [
+        "cache",
+        "file",
+        "node.js"
+    ],
+    "directories": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "file-cache"
+    }
+}
