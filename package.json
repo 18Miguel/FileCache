@@ -4,11 +4,15 @@
     "version": "1.0.0",
     "description": "A simple file-based cache implementation",
     "private": true,
+    "license": "MIT",
     "main": "file-cache.js",
     "scripts": {
         "test": "node test/index.js"
     },
-    "license": "MIT",
+    "dependencies": {
+        "fs": "^0.0.1",
+        "os": "^0.1.0"
+    },
     "keywords": [
         "cache",
         "file",
