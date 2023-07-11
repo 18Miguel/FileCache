@@ -7,7 +7,7 @@ class FileCache {
    * @param {string} [filename] - Optional custom filename for the cache.
    */
   constructor(filename) {
-    this.filename = filename ? filename : `${tmpdir()}/file_cache.json`;
+    this.filename = `${filename}.json` ? filename : `${tmpdir()}/file_cache.json`;
     this.#loadCache();
   }
 
