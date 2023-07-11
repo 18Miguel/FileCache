@@ -2,11 +2,11 @@
 
 A simple file-based cache implementation for Node.js.
 
-## Installation
+<!--## Installation
 
 ```shell
 npm install file-cache
-```
+```-->
 
 ## Usage
 
