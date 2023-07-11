@@ -9,10 +9,6 @@
     "scripts": {
         "test": "node test/index.js"
     },
-    "dependencies": {
-        "fs": "^20.4.0",
-        "os": "^20.4.0"
-    },
     "keywords": [
         "cache",
         "file",
