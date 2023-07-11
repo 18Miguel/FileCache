@@ -10,8 +10,8 @@
         "test": "node test/index.js"
     },
     "dependencies": {
-        "fs": "^0.0.1",
-        "os": "^0.1.0"
+        "fs": "^20.4.0",
+        "os": "^20.4.0"
     },
     "keywords": [
         "cache",
