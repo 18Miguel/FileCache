@@ -24,7 +24,7 @@ class FileCache {
         this.cache = {};
       }
     } catch (error) {
-      console.error('Error loading cache:', error);
+      console.error('[FileCache] Error loading cache:', error);
       this.cache = {};
     }
   }
@@ -33,7 +33,7 @@ class FileCache {
     try {
       writeFileSync(this.filename, JSON.stringify(this.cache), 'utf8');
     } catch (error) {
-      console.error('Error saving cache:', error);
+      console.error('[FileCache] Error saving cache:', error);
     }
   }
 
