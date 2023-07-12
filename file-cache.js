@@ -60,9 +60,9 @@ class FileCache {
   }
 
   /**
-   * Sets a value in the cache for the given key.
+   * Retrieves a value from the cache for the given key.
    * @param {string} key - The cache key.
-   * @param {*} value - The value to be cached.
+   * @returns {*} The cached value.
    */
   get(key) {
     return this.#cache[key];
