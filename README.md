@@ -37,6 +37,13 @@ Creates an instance of FileCache.
 
 - `filename` (optional): Custom filename for the cache. If not provided, a default filename will be generated.
 
+### `cache.has(key)`
+
+Checks if the cache contains a value for the given key.
+
+- `key`: The cache key to check.
+- Returns: true if the cache has a value for the key, false otherwise.
+
 ### `cache.set(key, value)`
 
 Sets a value in the cache for the given key.
