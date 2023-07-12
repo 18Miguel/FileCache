@@ -41,6 +41,15 @@ class FileCache {
   }
 
   /**
+   * Checks if a key exists in the cache.
+   * @param {string} key - The cache key to check.
+   * @returns {boolean} Returns true if the key exists in the cache, false otherwise.
+   */
+  has(key) {
+    return key in this.cache;
+  }
+
+  /**
    * Sets a value in the cache for the given key.
    * @param {string} key - The cache key.
    * @param {*} value - The value to be cached.
