@@ -1,6 +1,6 @@
 const FileCache = require('../file-cache');
 
-const cache = new FileCache();
+const cache = new FileCache("TesT_ABC");
 
 cache.set('key', 'value');
 cache.set('key2', 'value2');
@@ -21,3 +21,5 @@ cache.set('key', 'value');
 console.log(cache.take('key'));
 console.log(cache.get('obj'));
 console.log(cache.get('key2'));
+
+cache.clear();
