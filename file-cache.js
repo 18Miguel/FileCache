@@ -2,6 +2,7 @@ const { existsSync, readFileSync, writeFileSync, unlinkSync } = require('fs');
 const { tmpdir } = require('os');
 
 class FileCache {
+  #filename;
   #cache;
 
   /**
@@ -13,14 +14,14 @@ class FileCache {
     if (filename && !filename.match(/^[^.\s\\/]+$/))
       throw new Error('Invalid filename provided. Filename must not contain spaces or special characters.');
 
-    this.filename = filename ? `${tmpdir()}/${filename}.json` : `${tmpdir()}/file_cache.json`;
+    this.#filename = filename ? `${tmpdir()}/${filename}.json` : `${tmpdir()}/file_cache.json`;
     this.#loadCache();
   }
 
   #loadCache() {
     try {
-      if (existsSync(this.filename)) {
-        const data = readFileSync(this.filename, 'utf8');
+      if (existsSync(this.#filename)) {
+        const data = readFileSync(this.#filename, 'utf8');
         this.#cache = JSON.parse(data);
       } else {
         this.#cache = {};
@@ -33,7 +34,7 @@ class FileCache {
 
   #saveCache() {
     try {
-      writeFileSync(this.filename, JSON.stringify(this.#cache), 'utf8');
+      writeFileSync(this.#filename, JSON.stringify(this.#cache), 'utf8');
     } catch (error) {
       console.error('[FileCache] Error saving cache:', error);
     }
@@ -84,7 +85,7 @@ class FileCache {
    */
   clear() {
     this.#cache = {};
-    unlinkSync(this.filename);
+    unlinkSync(this.#filename);
   }
 }
 
