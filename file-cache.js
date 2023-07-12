@@ -15,6 +15,7 @@ class FileCache {
       throw new Error('Invalid filename provided. Filename must not contain spaces or special characters.');
 
     this.#filename = filename ? `${tmpdir()}/${filename}.json` : `${tmpdir()}/file_cache.json`;
+    this.#cache = {};
     this.#loadCache();
   }
 
@@ -41,12 +42,12 @@ class FileCache {
   }
 
   /**
-   * Checks if a key exists in the cache.
+   * Checks if the cache contains a value for the given key.
    * @param {string} key - The cache key to check.
-   * @returns {boolean} Returns true if the key exists in the cache, false otherwise.
+   * @returns {boolean} Returns true if the cache has a value for the key, false otherwise.
    */
   has(key) {
-    return key in this.cache;
+    return key in this.#cache;
   }
 
   /**

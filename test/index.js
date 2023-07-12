@@ -22,4 +22,11 @@ console.log(cache.take('key'));
 console.log(cache.get('obj'));
 console.log(cache.get('key2'));
 
+console.log();
+cache.set('obj', { name: ':)', id: 888 });
+console.log(cache.has('obj'));
+console.log(cache.get('obj'));
+console.log(cache.take('obj'));
+console.log(cache.has('obj'));
+
 cache.clear();
