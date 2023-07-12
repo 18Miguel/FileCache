@@ -1,6 +1,6 @@
 # FileCache
 
-A simple file-based cache implementation for Node.js.
+A simple file-based cache implementation using Node.js <img align="center" alt="Miguel-NodeJS" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-plain.svg"/>
 
 ## Installation
 
