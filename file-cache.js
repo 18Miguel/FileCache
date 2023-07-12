@@ -74,9 +74,8 @@ class FileCache {
    * @returns {*} The cached value.
    */
   take(key) {
-    const value = this.#cache[key];
-    delete this.#cache[key];
-    this.#saveCache();
+    const value = this.get(key);
+    this.delete(key);
     return value;
   }
 
