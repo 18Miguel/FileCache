@@ -35,7 +35,7 @@ class FileCache {
 
   #saveCache() {
     try {
-      writeFileSync(this.#filename, JSON.stringify(this.#cache), 'utf8');
+      writeFileSync(this.#filename, JSON.stringify(this.#cache, null, 4), 'utf8');
     } catch (error) {
       console.error('[FileCache] Error saving cache:', error);
     }
