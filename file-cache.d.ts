@@ -2,9 +2,10 @@ declare class FileCache {
     /**
      * Creates an instance of FileCache.
      * @param {string} [filename] - Optional custom filename for the cache.
+     * @param {string} [filepath] - Optional custom file path for the cache.
      * @throws {Error} Throws an error if the provided filename contains invalid characters.
      */
-    constructor(filename?: string);
+    constructor(filename?: string, filepath?: string);
 
     /**
      * Checks if the cache contains a value for the given key.

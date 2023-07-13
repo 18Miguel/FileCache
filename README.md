@@ -36,6 +36,7 @@ cache.clear();
 Creates an instance of FileCache.
 
 - `filename` (optional): Custom filename for the cache. If not provided, a default filename will be generated.
+- `filepath` (optional): Custom file path for the cache. If not provided, a default file path will be set (system temp directory).
 
 ### `cache.has(key)`
 

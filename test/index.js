@@ -1,6 +1,6 @@
 const FileCache = require('../file-cache');
 
-const cache = new FileCache("TesT_ABC");
+const cache = new FileCache("TesT_ABC", __dirname);
 
 cache.set('key', 'value');
 cache.set('key2', 'value2');

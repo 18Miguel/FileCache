@@ -8,13 +8,16 @@ class FileCache {
   /**
    * Creates an instance of FileCache.
    * @param {string} [filename] - Optional custom filename for the cache.
+   * @param {string} [filepath] - Optional custom file path for the cache.
    * @throws {Error} Throws an error if the provided filename contains invalid characters.
    */
-  constructor(filename) {
+  constructor(filename, filepath) {
     if (filename && !filename.match(/^[^.\s\\/]+$/))
       throw new Error('Invalid filename provided. Filename must not contain spaces or special characters.');
 
-    this.#filename = filename ? `${tmpdir()}/${filename}.json` : `${tmpdir()}/file_cache.json`;
+    this.#filename = filename
+      ? `${filepath ? filepath : tmpdir()}/${filename}.json`
+      : `${filepath ? filepath : tmpdir()}/file_cache.json`;
     this.#cache = {};
     this.#loadCache();
   }
