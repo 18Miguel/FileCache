@@ -75,3 +75,5 @@ Removes the value from the cache for the given key.
 ### `cache.clear()`
 
 Clears the cache by removing all key-value pairs.
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/18Miguel/file-cache/blob/main/LICENSE) file for details.
