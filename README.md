@@ -5,7 +5,7 @@ A simple file-based cache implementation using Node.js <img align="center" alt="
 ## Installation
 
 ```shell
-npm install https://github.com/18Miguel/FileCache
+npm install https://github.com/18Miguel/file-cache
 ```
 
 ## Usage
