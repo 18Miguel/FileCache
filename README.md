@@ -76,4 +76,6 @@ Removes the value from the cache for the given key.
 
 Clears the cache by removing all key-value pairs.
 
+## License
+
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/18Miguel/file-cache/blob/main/LICENSE) file for details.
