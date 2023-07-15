@@ -97,7 +97,15 @@ class FileCache {
    */
   clear() {
     this.#cache = {};
-    unlinkSync(this.#filename);
+
+    try {
+      this.#cache = {};
+      if (existsSync(this.#filename)) {
+        unlinkSync(this.#filename);
+      }
+    } catch (error) {
+      console.error('[FileCache] Error loading cache:', error);
+    }
   }
 }
 
