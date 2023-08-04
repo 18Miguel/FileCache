@@ -1,4 +1,5 @@
 const { existsSync, readFileSync, writeFileSync, unlinkSync } = require('fs');
+const { join } = require('path');
 const { tmpdir } = require('os');
 
 class FileCache {
@@ -15,9 +16,9 @@ class FileCache {
     if (filename && !filename.match(/^[^.\s\\/]+$/))
       throw new Error('Invalid filename provided. Filename must not contain spaces or special characters.');
 
-    this.#filename = filename
-      ? `${filepath ? filepath : tmpdir()}/${filename}.json`
-      : `${filepath ? filepath : tmpdir()}/file_cache.json`;
+    this.#filename = join(
+      `${filepath ? filepath : tmpdir()}`,
+      `${filename ? `${filename}.json` : 'file_cache.json'}`);
     this.#cache = {};
     this.#loadCache();
   }
@@ -96,8 +97,6 @@ class FileCache {
    * Clears the cache by removing all key-value pairs.
    */
   clear() {
-    this.#cache = {};
-
     try {
       this.#cache = {};
       if (existsSync(this.#filename)) {

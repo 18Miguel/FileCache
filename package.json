@@ -1,7 +1,7 @@
 {
     "name": "file-cache",
     "author": "18Miguel",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A simple file-based cache implementation",
     "private": true,
     "license": "MIT",
